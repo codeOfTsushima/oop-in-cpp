@@ -9,22 +9,37 @@ private:
 //Encapsulation
 public:
 
-    void setName(string name){
+    void setName(string name){ //setter
         Name = name;
 
     }
-    string getName(){
+    string getName(){ //getter
         return Name;
     }
+    void setCompany(string company){
+        Company=company;
+    }
+    string getCompany(){
+        return Company;
+    }
     void setAge(int age){
+        if(age>=18)
         Age = age;
     }
     int getAge(){
         return Age;
     }
 
-    void IntroduceYourself(){   }
-    Employee(string Name,string Company,int age){}
+    void IntroduceYourself(){  
+        cout << "Name - " << Name << endl;
+        cout << "Company - " << Company << endl;
+        cout << "Age - " << Age << endl;
+     }
+    Employee(string Name,string Company,int age){
+        cout << "Name - " << Name << endl;
+        cout << "Company - " << Company << endl;
+        cout << "Age - " << Age << endl;
+    }
 
 };
 
@@ -35,6 +50,6 @@ int main(){
     Employee employee2 = Employee("Neymar", "Football", 34);
     employee2.IntroduceYourself();
 
-    employee1.setAge(39);
+    employee1.setAge(15);
     cout<<employee1.getName()<< " is "<<employee1.getAge()<<" years old"<<endl;
 }
